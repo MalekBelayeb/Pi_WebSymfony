@@ -1,0 +1,11 @@
+membre:
+    resource: "@MembreBundle/Resources/config/routing.yml"
+    prefix:   /membre
+
+main:
+    resource: "@mainBundle/Resources/config/routing.yml"
+    prefix:   /accueil
+
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation

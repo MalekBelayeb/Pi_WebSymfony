@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Conversation" table="conversation">
+    <unique-constraints>
+      <unique-constraint name="idMSG" columns="idMSG"/>
+    </unique-constraints>
+    <id name="idmsg" type="integer" column="idMSG">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="idsrc" type="integer" column="idSRC" nullable="true">
+      <options>
+        <option name="unsigned"/>
+      </options>
+    </field>
+    <field name="iddest" type="integer" column="idDEST" nullable="true">
+      <options>
+        <option name="unsigned"/>
+      </options>
+    </field>
+    <field name="message" type="text" column="MESSAGE" length="65535" nullable="true">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
+    <field name="seen" type="datetime" column="SEEN" nullable="true"/>
+  </entity>
+</doctrine-mapping>

@@ -1,0 +1,4 @@
+membre_homepage:
+    path:     /
+    defaults: { _controller: MembreBundle:Default:index }
+

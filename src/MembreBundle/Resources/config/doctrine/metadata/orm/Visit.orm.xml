@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Visit" table="visit">
+    <id name="idvisit" type="integer" column="idVisit">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="id" type="integer" column="id" nullable="false">
+      <options>
+        <option name="unsigned"/>
+      </options>
+    </field>
+    <field name="idmatchedwith" type="integer" column="idMatchedWith" nullable="false">
+      <options>
+        <option name="unsigned"/>
+      </options>
+    </field>
+    <field name="visitedIn" type="date" column="visited_in" nullable="true"/>
+  </entity>
+</doctrine-mapping>

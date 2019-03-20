@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Emetteur" table="emetteur">
+    <id name="idem" type="integer" column="idEm">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="id" type="integer" column="id" nullable="false">
+      <options>
+        <option name="unsigned"/>
+      </options>
+    </field>
+    <field name="lastconnection" type="datetime" column="lastConnection" nullable="true"/>
+    <field name="isactive" type="boolean" column="isActive" nullable="true"/>
+  </entity>
+</doctrine-mapping>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Rating" table="rating">
+    <indexes>
+      <index name="id_pagecommercial" columns="id_pagecommercial"/>
+      <index name="id_membre" columns="id_membre"/>
+    </indexes>
+    <id name="idrating" type="integer" column="idRating">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="idMembre" type="integer" column="id_membre" nullable="false">
+      <options>
+        <option name="unsigned"/>
+      </options>
+    </field>
+    <field name="idPagecommercial" type="integer" column="id_pagecommercial" nullable="false">
+      <options>
+        <option name="unsigned"/>
+      </options>
+    </field>
+    <field name="nbrrating" type="integer" column="nbrRating" nullable="false">
+      <options>
+        <option name="unsigned"/>
+      </options>
+    </field>
+  </entity>
+</doctrine-mapping>
